@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_margin="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <!-- 图标 -->
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp">
+
+                <View
+                    android:id="@+id/view_sensor_icon_bg"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shape_circle_grey" />
+
+                <TextView
+                    android:id="@+id/tv_sensor_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    tools:text="thermostat" />
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <!-- 数值（大字加粗） -->
+            <TextView
+                android:id="@+id/tv_sensor_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3a4a2e"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="25.3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 传感器名称（小字） -->
+            <TextView
+                android:id="@+id/tv_sensor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3a4a2e"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/edit_style"
+                android:maxLines="1"
+                tools:text="环境温度" />
+            <!-- tag（最小字，最下方） -->
+            <TextView
+                android:id="@+id/tv_sensor_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#a4b0be"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/edit_style"
+                android:maxLines="1"
+                tools:text="tp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#a4b0be"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                tools:text="点击查看→" />
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

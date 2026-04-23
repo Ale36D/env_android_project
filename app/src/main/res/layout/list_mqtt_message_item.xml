@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="4dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:id="@+id/tv_msg_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="接收"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#0C447C"
+                android:background="@drawable/edit_style"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp" />
+
+            <TextView
+                android:id="@+id/tv_msg_device_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:textColor="#57606f"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_msg_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#a4b0be"
+                android:textSize="10sp"
+                android:maxLines="1"
+                android:ellipsize="middle"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_msg_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#a4b0be"
+                android:textSize="10sp"
+                android:layout_marginStart="8dp"/>
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_msg_payload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2f3542"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="2dp"
+            android:background="@drawable/edit_style"
+            android:padding="10dp"
+            android:maxLines="6"
+            android:ellipsize="end" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <!-- 圆形色块预览 -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp">
+
+            <View
+                android:id="@+id/view_rgb_color_preview"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/shape_circle_grey" />
+
+            <TextView
+                android:id="@+id/tv_rgb_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:text="palette" />
+        </FrameLayout>
+
+        <!-- 标签 -->
+        <TextView
+            android:id="@+id/tv_rgb_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#a4b0be"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/edit_style"
+            android:layout_marginStart="8dp"
+            tools:text="红色 R" />
+
+        <!-- ★ 改为 TextView 只读显示 MQTT 回传值 ★ -->
+        <TextView
+            android:id="@+id/tv_rgb_value"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/edit_style"
+            android:gravity="center"
+            android:hint="--"
+            android:textColor="#2f3542"
+            android:textColorHint="#a4b0be"
+            android:textSize="14sp"
+            android:padding="4dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet_round">
+
+    <!-- 顶部拖拽条 -->
+    <View
+        android:layout_marginTop="16dp"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#CCCCCC"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 标题 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="设置 RGB 值"
+                android:textStyle="bold"
+                android:textColor="#57606f"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 颜色预览条 -->
+            <View
+                android:id="@+id/view_rgb_preview"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/edit_style"
+                android:layout_marginBottom="20dp" />
+
+            <!-- R 通道 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="R"
+                    android:textAlignment="center"
+                    android:textColor="#F44336"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider_r"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:valueFrom="0"
+                    android:valueTo="255"
+                    android:stepSize="1"
+                    app:trackColorActive="#F44336"
+                    app:trackColorInactive="#FFCDD2"
+                    app:thumbColor="#F44336"
+                    app:haloColor="#40F44336"/>
+
+                <TextView
+                    android:id="@+id/tv_r_val"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- G 通道 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="G"
+                    android:textAlignment="center"
+                    android:textColor="#4CAF50"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider_g"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:valueFrom="0"
+                    android:valueTo="255"
+                    android:stepSize="1"
+                    app:trackColorActive="#4CAF50"
+                    app:trackColorInactive="#C8E6C9"
+                    app:thumbColor="#4CAF50"
+                    app:haloColor="#404CAF50"/>
+
+                <TextView
+                    android:id="@+id/tv_g_val"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- B 通道 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:textAlignment="center"
+                    android:textColor="#1976D2"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider_b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:valueFrom="0"
+                    android:valueTo="255"
+                    android:stepSize="1"
+                    app:trackColorActive="#1976D2"
+                    app:trackColorInactive="#BBDEFB"
+                    app:thumbColor="#1976D2"
+                    app:haloColor="#401976D2"/>
+
+                <TextView
+                    android:id="@+id/tv_b_val"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 发送按钮 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_rgb_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="发送"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:backgroundTint="#3742fa"
+                app:cornerRadius="14dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
