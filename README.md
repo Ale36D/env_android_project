@@ -181,3 +181,9 @@ implementation 'com.caverock:androidsvg-aar:1.4'
 - **Android APP**：本项目，MQTT 实时通信 + Material Design UI
 - **Django Web 平台**：设备管理 + 数据可视化 + 数据大屏
 - **MQTT Broker**：消息中间件，支持多终端同时订阅和控制
+## 运行截图
+![登录界面](https://raw.githubusercontent.com/Ale36D/img-bed/main/android_4.jpg)
+![主界面](https://raw.githubusercontent.com/Ale36D/img-bed/main/android_3.jpg)
+![天气界面](https://raw.githubusercontent.com/Ale36D/img-bed/main/android_2.jpg)
+![传感器数据界面](https://raw.githubusercontent.com/Ale36D/img-bed/main/android_1.jpg)
+
